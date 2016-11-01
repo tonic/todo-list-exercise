@@ -4,7 +4,9 @@ Please create a database and a web-based .NET API for a simple todo list applica
 
 Feel free to use any resources that you would normally have at your disposal (Google, Stack Overflow, etc.), and do not hesitate to [contact us](mailto:developer@hellotonic.com) if you have any questions.
 
-## Requirements
+## Minimum Requirements
+
+There are no specific requirements about how you build the app, model your data, or implement the API. At a minimum, however, your application should fulfill the following:
 
 * Use C# and .NET
 * Create a database

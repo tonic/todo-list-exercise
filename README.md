@@ -7,7 +7,7 @@ Feel free to use any resources that you would normally have at your disposal (Go
 ## Requirements
 
 * Use C# and .NET
-* Utilize a database
+* Create a database
 * Implement all CRUD actions
 
 ## Bonus Points

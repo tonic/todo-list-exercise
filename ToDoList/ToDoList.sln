@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList.Api", "ToDoList.Ap
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ToDoList.Database", "ToDoList.Database\ToDoList.Database.sqlproj", "{C94E0E93-7135-46D3-9026-6EE8DD52C0A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList.Framework.Data", "ToDoList.Framework.Data\ToDoList.Framework.Data.csproj", "{66742E7B-209C-4FFD-AD5C-E49AE0B016F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList.Framework.Interfaces", "ToDoList.Framework.Interfaces\ToDoList.Framework.Interfaces.csproj", "{017EE94A-BB80-49F4-B357-E7F5AC644892}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList.Business", "ToDoList.Business\ToDoList.Business.csproj", "{F645DD86-F403-4596-B783-702599862EEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +29,18 @@ Global
 		{C94E0E93-7135-46D3-9026-6EE8DD52C0A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C94E0E93-7135-46D3-9026-6EE8DD52C0A7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C94E0E93-7135-46D3-9026-6EE8DD52C0A7}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{66742E7B-209C-4FFD-AD5C-E49AE0B016F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66742E7B-209C-4FFD-AD5C-E49AE0B016F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66742E7B-209C-4FFD-AD5C-E49AE0B016F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66742E7B-209C-4FFD-AD5C-E49AE0B016F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{017EE94A-BB80-49F4-B357-E7F5AC644892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{017EE94A-BB80-49F4-B357-E7F5AC644892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{017EE94A-BB80-49F4-B357-E7F5AC644892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{017EE94A-BB80-49F4-B357-E7F5AC644892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F645DD86-F403-4596-B783-702599862EEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F645DD86-F403-4596-B783-702599862EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F645DD86-F403-4596-B783-702599862EEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F645DD86-F403-4596-B783-702599862EEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -124,9 +124,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ListItemsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ChangeListItemContentModel.cs" />
+    <Compile Include="Models\ChangeListItemStatusModel.cs" />
+    <Compile Include="Models\ListItemModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -148,11 +152,19 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ToDoList.Framework.Data\ToDoList.Framework.Data.csproj">
+      <Project>{66742e7b-209c-4ffd-ad5c-e49ae0b016f5}</Project>
+      <Name>ToDoList.Framework.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ToDoList.Framework.Interfaces\ToDoList.Framework.Interfaces.csproj">
+      <Project>{017ee94a-bb80-49f4-b357-e7f5ac644892}</Project>
+      <Name>ToDoList.Framework.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

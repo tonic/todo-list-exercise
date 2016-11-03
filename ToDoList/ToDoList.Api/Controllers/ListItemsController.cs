@@ -17,7 +17,7 @@ namespace ToDoList.Api.Controllers
         }
 
         [HttpGet,
-        Route("api/listitems")]
+        Route("listitems")]
         public async Task<IHttpActionResult> GetListItems()
         {
             var result = await _repository.Find();
@@ -26,7 +26,7 @@ namespace ToDoList.Api.Controllers
         }
 
         [HttpPost,
-        Route("api/listitems")]
+        Route("listitems")]
         public async Task<IHttpActionResult> CreateListItem(CreateListItemModel model)
         {
             if (model == null) return BadRequest();
@@ -37,7 +37,7 @@ namespace ToDoList.Api.Controllers
         }
 
         [HttpPut,
-        Route("api/listitems/{id}/iscomplete")]
+        Route("listitems/{id}/iscomplete")]
         public async Task<IHttpActionResult> ChangeListItemStatus([FromUri] int id, ChangeListItemStatusModel model)
         {
             if (model == null || id < 1) return BadRequest();
@@ -50,7 +50,7 @@ namespace ToDoList.Api.Controllers
         }
 
         [HttpPut,
-        Route("api/listitems/{id}/content")]
+        Route("listitems/{id}/content")]
         public async Task<IHttpActionResult> ChangeListItemContent([FromUri] int id, ChangeListItemContentModel model)
         {
             if (model == null || id < 1) return BadRequest();
@@ -63,7 +63,7 @@ namespace ToDoList.Api.Controllers
         }
 
         [HttpDelete,
-        Route("api/listitems/{id}")]
+        Route("listitems/{id}")]
         public async Task<IHttpActionResult> DeleteListItem([FromUri] int id)
         {
             if (id < 1) return BadRequest();

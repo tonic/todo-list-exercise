@@ -13,16 +13,10 @@ namespace ToDoList.Api
         {
 			var container = new UnityContainer();
             
-            // TODO move this
             string connectionString = ConfigurationManager.AppSettings["ConnectionString"];
 
             container.RegisterType<IListItemRepository, ListItemRepository>(new InjectionConstructor(connectionString));
 
-            // register all your components with the container here
-            // it is NOT necessary to register your controllers
-            
-            // e.g. container.RegisterType<ITestService, TestService>();
-            
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
     }

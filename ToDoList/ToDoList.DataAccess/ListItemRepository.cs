@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using ToDoList.Framework.Data;
 using ToDoList.Framework.Interfaces.DataAccess;
@@ -13,6 +12,8 @@ namespace ToDoList.DataAccess
     {
         private readonly string _connectionString;
 
+        // When I use Dapper or ADO.NET, I usually create separate query objects to encapsulate my SQL and keep things organized, and have my DAL delegate to them
+        // to do data access.  It isn't necessary here, though.
         private const string GetAllQuery = @"SELECT [Id], [Content], [IsComplete] from [ToDo].[ListItem]";
         private const string InsertCommand = @"INSERT INTO [ToDo].[ListItem] ([Content]) OUTPUT Inserted.Id VALUES (@Content)";
         private const string RemoveCommand = @"DELETE FROM [ToDo].[ListItem] WHERE [Id] = @Id";

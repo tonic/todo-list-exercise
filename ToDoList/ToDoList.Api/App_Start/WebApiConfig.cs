@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Web.Http;
+﻿using System.Web.Http;
+using ToDoList.Api.Filters;
 
 namespace ToDoList.Api
 {
@@ -12,6 +9,8 @@ namespace ToDoList.Api
         {
             // Web API routes
             config.MapHttpAttributeRoutes();
+
+            config.Filters.Add(new ValidateModelAttribute());
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

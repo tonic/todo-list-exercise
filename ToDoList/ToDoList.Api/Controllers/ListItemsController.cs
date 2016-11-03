@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Linq;
 using System.Web.Http;
 using ToDoList.Api.Models;
 using System.Threading.Tasks;
-using ToDoList.DataAccess;
 using ToDoList.Framework.Interfaces.DataAccess;
 using ToDoList.Framework.Data;
 
@@ -34,6 +29,8 @@ namespace ToDoList.Api.Controllers
         Route("api/listitems")]
         public async Task<IHttpActionResult> CreateListItem(CreateListItemModel model)
         {
+            if (model == null) return BadRequest();
+
             var result = await _repository.Insert(new CreateListItemDTO { Content = model.Content });
 
             return Created($"/api/listItems/{result}", new { Id = result });
@@ -43,6 +40,8 @@ namespace ToDoList.Api.Controllers
         Route("api/listitems/{id}/iscomplete")]
         public async Task<IHttpActionResult> ChangeListItemStatus([FromUri] int id, ChangeListItemStatusModel model)
         {
+            if (model == null || id < 1) return BadRequest();
+
             var result = await _repository.UpdateStatus(id, model.IsComplete);
             
             if (!result) return NotFound();
@@ -54,6 +53,8 @@ namespace ToDoList.Api.Controllers
         Route("api/listitems/{id}/content")]
         public async Task<IHttpActionResult> ChangeListItemContent([FromUri] int id, ChangeListItemContentModel model)
         {
+            if (model == null || id < 1) return BadRequest();
+
             var result = await _repository.UpdateContent(id, model.Content);
 
             if (!result) return NotFound();
@@ -65,6 +66,8 @@ namespace ToDoList.Api.Controllers
         Route("api/listitems/{id}")]
         public async Task<IHttpActionResult> DeleteListItem([FromUri] int id)
         {
+            if (id < 1) return BadRequest();
+
             var result = await _repository.Remove(id);
 
             if (!result) return NotFound();

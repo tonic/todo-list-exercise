@@ -7,7 +7,8 @@ namespace ToDoList.Framework.Interfaces.DataAccess
     {
         IEnumerable<ListItem> Find();
         int Insert(ListItem item);
-        void Remove(int id);
-        void Update(ListItem item);
+        bool Remove(int id);
+        bool UpdateStatus(int id, bool isComplete);
+        bool UpdateContent(int id, string content);
     }
 }

@@ -16,9 +16,9 @@ namespace ToDoList.Api.Controllers
     {
         private readonly IListItemRepository _repository;
 
-        public ListItemsController()
+        public ListItemsController(IListItemRepository repository)  // normally I would create a business layer on top of the DAL and inject it here instead (e.g. IListItemService), but this app has no business logic.
         {
-            _repository = new ListItemRepository("Data Source=W-DN-PL-KHALBER\\SQLEXPRESS;Initial Catalog=ToDoList;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True");
+            _repository = repository;
         }
 
         [HttpGet,

@@ -6,44 +6,70 @@ using System.Net.Http;
 using System.Web.Http;
 using ToDoList.Api.Models;
 using System.Threading.Tasks;
+using ToDoList.DataAccess;
+using ToDoList.Framework.Interfaces.DataAccess;
+using ToDoList.Framework.Data;
 
 namespace ToDoList.Api.Controllers
 {
     public class ListItemsController : ApiController
     {
+        private readonly IListItemRepository _repository;
+
+        public ListItemsController()
+        {
+            _repository = new ListItemRepository("Data Source=W-DN-PL-KHALBER\\SQLEXPRESS;Initial Catalog=ToDoList;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True");
+        }
+
         [HttpGet,
         Route("api/listitems")]
-        public async Task<IEnumerable<ListItemModel>> GetListItems()
+        public async Task<IHttpActionResult> GetListItems()
         {
-            return await Task.FromResult(Enumerable.Empty<ListItemModel>());
+            var result = await _repository.Find();
+
+            return Ok(result.Select(i => new ListItemModel { Id = i.Id, Content = i.Content, IsComplete = i.IsComplete }).ToArray());
         }
 
         [HttpPost,
         Route("api/listitems")]
-        public async Task<int> CreateListItem(ListItemModel model)
+        public async Task<IHttpActionResult> CreateListItem(CreateListItemModel model)
         {
-            return await Task.FromResult(0);
+            var result = await _repository.Insert(new CreateListItemDTO { Content = model.Content });
+
+            return Created($"/api/listItems/{result}", new { Id = result });
         }
 
         [HttpPut,
         Route("api/listitems/{id}/iscomplete")]
-        public async Task ChangeListItemStatus([FromUri] int id, ChangeListItemStatusModel model)
+        public async Task<IHttpActionResult> ChangeListItemStatus([FromUri] int id, ChangeListItemStatusModel model)
         {
-            return;
+            var result = await _repository.UpdateStatus(id, model.IsComplete);
+            
+            if (!result) return NotFound();
+
+            return Ok();
         }
 
         [HttpPut,
         Route("api/listitems/{id}/content")]
-        public async Task ChangeListItemContent([FromUri] int id, ChangeListItemContentModel model)
+        public async Task<IHttpActionResult> ChangeListItemContent([FromUri] int id, ChangeListItemContentModel model)
         {
-            return;
+            var result = await _repository.UpdateContent(id, model.Content);
+
+            if (!result) return NotFound();
+
+            return Ok();
         }
 
         [HttpDelete,
         Route("api/listitems/{id}")]
-        public async Task DeleteListItem([FromUri] int id)
+        public async Task<IHttpActionResult> DeleteListItem([FromUri] int id)
         {
-            return;
+            var result = await _repository.Remove(id);
+
+            if (!result) return NotFound();
+
+            return Ok();
         }
     }
 }

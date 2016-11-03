@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
 using ToDoList.Framework.Data;
+using System.Threading.Tasks;
 
 namespace ToDoList.Framework.Interfaces.DataAccess
 {
     public interface IListItemRepository
     {
-        IEnumerable<ListItem> Find();
-        int Insert(ListItem item);
-        bool Remove(int id);
-        bool UpdateStatus(int id, bool isComplete);
-        bool UpdateContent(int id, string content);
+        Task<IEnumerable<ListItem>> Find();
+        Task<int> Insert(CreateListItemDTO item);
+        Task<bool> Remove(int id);
+        Task<bool> UpdateStatus(int id, bool isComplete);
+        Task<bool> UpdateContent(int id, string content);
     }
 }

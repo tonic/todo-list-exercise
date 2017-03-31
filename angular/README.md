@@ -8,7 +8,7 @@ Feel free to use any resources that you would normally have at your disposal (Go
 
 There are no specific requirements about how you build the app. At a minimum, however, your application should fulfill the following:
 
-* Use Angular (any version)
+* Use Angular version 2 or greater and TypeScript
 * Use a CSS framework of your choice
 * Implement all CRUD actions
 

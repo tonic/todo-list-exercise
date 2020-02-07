@@ -8,16 +8,17 @@ Feel free to use any resources that you would normally have at your disposal (Go
 
 There are no specific requirements about how you build the app. At a minimum, however, your application should fulfill the following:
 
-* Use React and Redux
-* Use a CSS framework of your choice
-* Implement all CRUD actions
-* Implement routing
+- [ ] Use React and Redux
+- [ ] Use a CSS framework of your choice
+- [ ] Use a CSS convention of your choice (Preprocessors, Modules, CSS-in-JS, etc.)
+- [ ] Implement all CRUD actions
+- [ ] Implement routing
 
 ## Bonus Points
 
-* Add a persistence layer
-* Create an API layer
-* Deploy the application
+- [ ] Add a persistence layer
+- [ ] Create an API layer
+- [ ] Deploy the application
 
 ## Submission Guidelines
 

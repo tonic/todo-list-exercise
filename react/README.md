@@ -1,4 +1,4 @@
-# React Todo List Exercise
+# React/NextJS Todo List Exercise
 
 Please create a single-page todo list application. This exercise should take approximately 1&ndash;2 hours, and is not expected to be perfect. Most importantly, it should demonstrate your skill set, and give us a better idea of how you approach problems and construct solutions.
 
@@ -8,7 +8,7 @@ Feel free to use any resources that you would normally have at your disposal (Go
 
 There are no specific requirements about how you build the app. At a minimum, however, your application should fulfill the following:
 
-- Use React
+- Use React or NextJS
 - Use a CSS framework of your choice
 - Use a CSS convention of your choice (Preprocessors, Modules, CSS-in-JS, etc.)
 - Implement all CRUD actions

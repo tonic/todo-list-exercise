@@ -1,6 +1,6 @@
 # Javascript Full Stack Todo List Exercise
 
-First off, thank you for both your time and your interest in Tonic! Please create a single-page todo list application. We prefer you time box this exercise to approximately 3&ndash;5 hours, and is not expected to be perfect. Most importantly, it should demonstrate your skill set, and give us a better idea of how you approach problems and construct solutions.
+First off, thank you for both your time and your interest in Tonic! Please create a single-page todo list application. We prefer you time box this exercise to approximately 3&ndash;3.5 hours, and is not expected to be perfect. Most importantly, it should demonstrate your skill set, and give us a better idea of how you approach problems and construct solutions.
 
 Feel free to use any resources that you would normally have at your disposal (Google, Stack Overflow, etc.), and do not hesitate to [contact us](mailto:developer@hellotonic.com) if you have any questions.
 

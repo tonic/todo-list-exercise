@@ -10,7 +10,7 @@ There are no specific requirements about how you build the app, model your data,
 
 * Use C# and .NET
 * Create a database
-* Implement all RESTful CRUD actions in a API controller
+* Implement all RESTful CRUD actions in a .NET API controller
 
 ## Bonus Points
 

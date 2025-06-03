@@ -1,28 +1,41 @@
-# Javascript Full Stack Todo List Exercise
+# Full-Stack TypeScript Todo List Exercise
 
-First off, thank you for both your time and your interest in Tonic! Please create a single-page todo list application. We prefer you time box this exercise to approximately 3&ndash;3.5 hours, and is not expected to be perfect. Most importantly, it should demonstrate your skill set, and give us a better idea of how you approach problems and construct solutions.
+Thank you for your interest in Tonic! As part of our process, we’d like you to complete a short full-stack coding exercise. The goal is to understand how you approach problems, organize your code, and deliver features across the stack.
 
-Feel free to use any resources that you would normally have at your disposal (Google, Stack Overflow, etc.), and do not hesitate to [contact us](mailto:developer@hellotonic.com) if you have any questions.
+We recommend time-boxing your effort to **3–3.5 hours**. We’re not looking for perfection—just a thoughtful, working solution that reflects how you build software.
 
-## Minimum Requirements
+Feel free to use any resources you normally rely on (e.g., Google, Stack Overflow, documentation). If you have any questions, don’t hesitate to contact us.
 
-There are no specific requirements about how you build the app. At a minimum, however, your application should fulfill the following:
+---
 
-- Use React or NextJS for the FrontEnd
-- Use a CSS framework of your choice
-- Use a CSS convention of your choice (Preprocessors, Modules, CSS-in-JS, etc.)
-- Implement all CRUD actions
-- Implement routing
+## Project Overview
 
-- Implement a Node/Express Backend
-- Setup a few CRUD routes/endpoints for the app
-- No need for a datastore, you can just echo back static results
+Build a single-page **Todo List** application with a backend that supports basic data operations. The app should allow users to create, read, update, and delete tasks. We expect you to demonstrate proficiency in both front-end and back-end JavaScript, including the use of **TypeScript**, **React**, **CSS**, and server-side logic running in a **Node.js environment** (e.g., Express or Next.js API routes).
 
-## Bonus Points
+---
 
-- Add a persistence layer
-- Deploy the application
+## Requirements
 
-## Submission Guidelines
+Your application should meet the following baseline criteria:
 
-Please create a new repository on GitHub and send us a link. Do not fork this repository. Alternatively, you may send us an archive by [email](mailto:developer@hellotonic.com).
+### Frontend
+
+- Use **React** with **TypeScript**
+- Implement **routing** (client-side or file-based)
+- Implement full **CRUD functionality**
+- Build a clean, usable UI using **CSS** (with or without a framework)
+
+### Backend
+
+- Use **TypeScript** to implement server-side logic in a **Node.js environment**
+- Expose basic **API endpoints** for managing todos
+- Include a **persistence layer** (in-memory, file-based, or database-backed)
+
+---
+
+## Submission
+
+Please submit your work in one of the following ways:
+
+- Push to a new **GitHub repository** and share the link
+- Email a `.zip` or `.tar.gz` archive

@@ -20,7 +20,7 @@ Your application should meet the following baseline criteria:
 
 ### Frontend
 
-- Use **React** with **TypeScript**
+- Use **React** (preferred) or **Angular** with **TypeScript**
 - Implement **routing** (client-side or file-based)
 - Implement full **CRUD functionality**
 - Build a clean, usable UI using **CSS** (with or without a framework)

@@ -2,9 +2,15 @@
 
 Thank you for your interest in Tonic! As part of our process, we’d like you to complete a short full-stack coding exercise. The goal is to understand how you approach problems, organize your code, and deliver features across the stack.
 
-We recommend time-boxing your effort to **3–3.5 hours**. We’re not looking for perfection—just a thoughtful, working solution that reflects how you build software.
+Pleasae time-box your effort to **3–3.5 hours**. We’re not looking for perfection—just a thoughtful, working solution that reflects how you build software.
 
-Feel free to use any resources you normally rely on (e.g., Google, Stack Overflow, documentation). If you have any questions, don’t hesitate to contact us.
+Please include details in the README for setting up and running your project locally.
+You can use AI for research, but please do not use it to generate code within the project.
+Set your project up as a GIT repository, create an initial commit when you start the project and a final commit when you complete.
+Please forward the GIT repo as your handoff, feel free to add any additional details or color with an additioanl email. 
+
+Feel free to use any resources you normally rely on (e.g., Google, Stack Overflow, documentation). 
+If you have any questions, don’t hesitate to contact us.
 
 ---
 
@@ -35,7 +41,5 @@ Your application should meet the following baseline criteria:
 
 ## Submission
 
-Please submit your work in one of the following ways:
-
+Please submit your work the following way:
 - Push to a new **GitHub repository** and share the link
-- Email a `.zip` or `.tar.gz` archive
